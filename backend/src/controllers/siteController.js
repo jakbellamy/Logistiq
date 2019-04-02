@@ -36,7 +36,7 @@ export const updateSite = (req, res) => {
         if (err) {
             res.send(err)
         }
-            res.json(site)
+        res.json(site)
     })
 }
 

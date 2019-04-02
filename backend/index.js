@@ -1,7 +1,9 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
-import siteRoutes from './src/routes/siteRoutes';
+
+import siteRoutes from './src/routes/siteRoutes'
+import supplyRoutes from './src/routes/supplyRoutes'
 
 const app = express()
 const PORT = 5000
@@ -16,6 +18,7 @@ app.use(bodyParser.json())
 
 //router setup
 siteRoutes(app)
+supplyRoutes(app)
 
 //serving static files
 app.use(express.static('public'))
