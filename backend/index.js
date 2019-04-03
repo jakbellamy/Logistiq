@@ -1,6 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
+import cors from 'cors'
 
 import siteRoutes from './src/routes/siteRoutes'
 import supplyRoutes from './src/routes/supplyRoutes'
@@ -12,6 +13,7 @@ const PORT = 5000
 mongoose.Promise = global.Promise
 mongoose.connect('mongodb://localhost/LOGISTIQdb')
 
+app.use(cors())
 //bodyparser setup
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
