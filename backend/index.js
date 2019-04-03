@@ -26,9 +26,6 @@ supplyRoutes(app)
 app.use(express.static('public'))
 
 app.get('/', (req, res) =>
-    res.send(`Node and Express are running on port ${PORT}`)
-)
-
+    res.send(`Node and Express are running on port ${PORT}`))
 app.listen(PORT, () => 
-    console.log(`your server is running on port ${PORT}`)
-)
+    console.log(`your server is running on port ${PORT}`))
