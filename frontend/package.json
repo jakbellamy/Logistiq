@@ -8,5 +8,8 @@
     "start": "node ./app.js"
   },
   "author": "Jakob Bellamy",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0"
+  }
 }
